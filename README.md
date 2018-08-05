@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jimfrenette/_s.svg?branch=blank)](https://travis-ci.org/jimfrenette/_s)
+[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
 _s
 ===
