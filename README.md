@@ -47,18 +47,21 @@ Good luck!
 
 ---
 
-## Setup
+## Webpack Build
+
 install npm packages
 ```
 npm i
 ```
 
-## Dev Build & Watch
+### Dev Build & Watch
 ```
 npm run dev
 ```
 
-## Prod Build
+### Prod Build
 ```
 npm run build
 ```
+
+https://jimfrenette.com/2018/08/completely-blank-no-css-_s-wordpress-starter-theme/
