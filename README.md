@@ -44,3 +44,21 @@ Then, update the stylesheet header in `style.css`, the links in `footer.php` wit
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
 Good luck!
+
+---
+
+## Setup
+install npm packages
+```
+npm i
+```
+
+## Dev Build & Watch
+```
+npm run dev
+```
+
+## Prod Build
+```
+npm run build
+```
