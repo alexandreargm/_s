@@ -50,6 +50,16 @@ Good luck!
 
 ## Webpack Build
 
+NOTE: if you've cloned this repo using `git`, you will need to be have the remote `blank` branch for the webpack build workflow. e.g.,
+
+```
+git clone https://github.com/jimfrenette/_s.git
+
+git fetch origin
+
+git checkout --track origin/blank
+```
+
 install npm packages
 ```
 npm i
