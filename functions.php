@@ -165,3 +165,32 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Limit post entry exceprt to 20 words.
+ */
+function my_excerpt_length(){
+	return 19;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
+/**
+ * Allow svg files to be uploaded
+ */
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+ }
+ add_filter('upload_mimes', 'cc_mime_types');
+
+/**
+* Set default wordpress media sizes.
+*/
+update_option( 'thumbnail_size_w', 600 );
+update_option( 'thumbnail_size_h', 300 );
+
+update_option( 'medium_size_w', 600 );
+update_option( 'medium_size_h', 400 );
+
+update_option( 'large_size_w', 1200 );
+update_option( 'large_size_h', 600 );
