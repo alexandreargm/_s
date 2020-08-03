@@ -1,0 +1,6 @@
+.container {
+  margin: 0 auto;
+  @media screen and (min-width: $laptop) {
+    max-width: 1200px;
+  }
+}
