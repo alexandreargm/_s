@@ -1,0 +1,25 @@
+article {
+  display: flex;
+  flex-direction: column;
+  .post-thumbnail {
+    display: inline-flex;
+    img {
+      border-radius: 6px;
+    }
+  }
+  .entry-meta {
+    span {
+      margin-right: 24px;
+    }
+  }
+}
+
+body {
+  &.blog {
+    .entry-meta {
+      display: none;
+    }
+  }
+  &.single-post {
+  }
+}

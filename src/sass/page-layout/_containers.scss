@@ -1,6 +1,8 @@
 .container {
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
   @media screen and (min-width: $laptop) {
-    max-width: 1200px;
+    max-width: 1232px;
   }
 }

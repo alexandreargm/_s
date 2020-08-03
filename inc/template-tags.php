@@ -62,24 +62,24 @@ if ( ! function_exists( 'ancora_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'ancora' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'ancora' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( '%1$s', 'ancora' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'ancora' ) );
+			/*$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'ancora' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'ancora' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-			}
+				/*printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'ancora' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			}*/
 		}
 
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		/*if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link(
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'ancora' ),
+						/*__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'ancora' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -90,7 +90,7 @@ if ( ! function_exists( 'ancora_entry_footer' ) ) :
 				)
 			);
 			echo '</span>';
-		}
+		}*/
 
 		edit_post_link(
 			sprintf(
@@ -127,14 +127,14 @@ if ( ! function_exists( 'ancora_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('large'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
+			the_post_thumbnail( 'thumbnail', array(
 				'alt' => the_title_attribute( array(
 					'echo' => false,
 				) ),

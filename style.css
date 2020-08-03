@@ -436,11 +436,13 @@ template {
 
 .container {
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @media screen and (min-width: 75em) {
   .container {
-    max-width: 1200px;
+    max-width: 1232px;
   }
 }
 
@@ -711,6 +713,7 @@ textarea {
 
 a {
   color: #656565;
+  text-decoration: none;
 }
 
 a:visited {
@@ -802,6 +805,7 @@ a:active {
   display: flex;
   padding: 10px 16px;
   line-height: 20px;
+  font-weight: 600;
 }
 
 .main-navigation a {
@@ -809,6 +813,7 @@ a:active {
   text-decoration: none;
   -ms-flex-item-align: center;
       align-self: center;
+  color: #656565;
 }
 
 /* Small menu. */
@@ -819,7 +824,7 @@ a:active {
   display: flex;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 48em) {
   .menu-toggle {
     display: none;
   }
@@ -859,11 +864,19 @@ a:active {
 --------------------------------------------------------------*/
 
 .site-header .site-header__container {
-  padding: 32px 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
+}
+
+@media screen and (min-width: 75em) {
+  .site-header .site-header__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .site-header .site-header__container .site-branding {
@@ -871,12 +884,108 @@ a:active {
   max-height: 48px;
 }
 
+.site-header .site-header__container .menu-all-pages-container {
+  display: none;
+}
+
+@media screen and (min-width: 48em) {
+  .site-header .site-header__container .menu-all-pages-container {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .site-header .site-header__container .site-navigation__actions {
+  display: -ms-flexbox;
+  display: flex;
   margin-left: auto;
 }
 
+.site-header .site-header__container .site-navigation__actions > * {
+  margin-left: 16px;
+}
+
 .site-header .site-header__container .site-navigation__actions .site-navigation__search-button {
-  font-size: 16px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 8px;
+  background-color: #fff;
+  border: none;
+}
+
+.site-header .site-header__container .site-navigation__actions .site-navigation__search-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.site-header .site-header__container .site-navigation__actions .site-navigation__search-button .site-navigation__search-button-path {
+  fill: #656565;
+}
+
+.site-header .site-header__container .site-navigation__actions .site-navigation__subscribe {
+  max-height: 40px;
+  border: 1px solid #656565;
+  color: #222;
+  background: none;
+  font-weight: 600;
+  display: none;
+}
+
+@media screen and (min-width: 75em) {
+  .site-header .site-header__container .site-navigation__actions .site-navigation__subscribe {
+    display: block;
+  }
+}
+
+.site-header .site-header__container .site-navigation__actions .menu-toggle {
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #656565;
+}
+
+.site-header .site-header__container .site-navigation__actions .menu-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.site-header .site-header__container .site-navigation__actions .menu-toggle .menu-toggle__path {
+  fill: #656565;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+article {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+article .post-thumbnail {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+article .post-thumbnail img {
+  border-radius: 6px;
+}
+
+article .entry-meta span {
+  margin-right: 24px;
+}
+
+body.blog .entry-meta {
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -1003,28 +1112,20 @@ a:active {
 ## Posts and pages
 --------------------------------------------------------------*/
 
-.sticky {
-  display: block;
+.content-area {
+  max-width: 600px;
 }
 
-.post,
-.page {
-  margin: 0 0 1.5em;
+.sticky {
+  display: block;
 }
 
 .updated:not(.published) {
   display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
 .page-links {
   clear: both;
-  margin: 0 0 1.5em;
 }
 
 /*--------------------------------------------------------------

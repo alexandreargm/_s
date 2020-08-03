@@ -52,13 +52,21 @@
 				) );
 				?>
 				<div class="site-navigation__actions">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ancora' ); ?></button>
 					<button class="site-navigation__search-button button">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							<path class="button site-navigation__search-button-path" d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/>
+							<path class="button site-navigation__search-button-path" d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/>
 						</svg>
 					</button>
+					<button class="site-navigation__subscribe button">
+						Suscríbete!
+					</button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<path class="button menu-toggle__path" d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
+						</svg>
+					</>
 				</div>
+				
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
