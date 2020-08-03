@@ -22,21 +22,21 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				blank_posted_on();
-				blank_posted_by();
+				ancora_posted_on();
+				ancora_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php blank_post_thumbnail(); ?>
+	<?php ancora_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'blank' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ancora' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -47,13 +47,13 @@
 		) );
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'blank' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ancora' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php blank_entry_footer(); ?>
+		<?php ancora_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

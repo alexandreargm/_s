@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function blank_wpcom_setup() {
+function ancora_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -28,4 +28,4 @@ function blank_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'blank_wpcom_setup' );
+add_action( 'after_setup_theme', 'ancora_wpcom_setup' );
